@@ -11,3 +11,8 @@ join vehicles on b.vehicle_id = vehicles.vehicle_id
 select * from vehicles
 where not exists 
   ( select 1 from bookings where bookings.vehicle_id = vehicles.vehicle_id )
+
+
+select * from vehicles 
+where status = 'available'
+and type = 'bike'
