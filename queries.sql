@@ -16,3 +16,12 @@ where not exists
 select * from vehicles 
 where status = 'available'
 and type = 'bike'
+
+
+select vehicles.name as vehicle_name, 
+count( bookings.booking_id ) as total_bookings
+ from bookings
+join vehicles 
+on bookings.vehicle_id = vehicles.vehicle_id
+group by vehicles.vehicle_id, vehicles.name
+having count (bookings.booking_id) > 2
