@@ -1,4 +1,5 @@
 🚗 Vehicle Rental System – Database Design & SQL Queries
+
 📌 Project Overview
 
 This project demonstrates the database design and SQL querying for a simplified Vehicle Rental System.
@@ -37,6 +38,7 @@ HAVING
 EXISTS
 
 🧠 Business Logic & System Rules
+
 👤 Users Table
 
 Stores system users.
@@ -94,15 +96,19 @@ One user (FK)
 One vehicle (FK)
 
 🗂 Database Tables
+
 1️⃣ Users
 Column	Description
+
 user_id (PK)	Unique user identifier
 name	User full name
 email	Unique email
 phone	Phone number
 role	Admin / Customer
+
 2️⃣ Vehicles
 Column	Description
+
 vehicle_id (PK)	Unique vehicle identifier
 name	Vehicle name
 type	car / bike / truck
@@ -110,8 +116,10 @@ model	Vehicle model
 registration_number	Unique registration
 rental_price	Price per day
 status	available / rented / maintenance
+
 3️⃣ Bookings
 Column	Description
+
 booking_id (PK)	Unique booking ID
 user_id (FK)	References Users
 vehicle_id (FK)	References Vehicles
@@ -119,18 +127,16 @@ start_date	Rental start
 end_date	Rental end
 status	Booking status
 total_cost	Total rental cost
+
 🔗 ERD Relationships
 
 One-to-Many:
-
 One User → Many Bookings
 
 Many-to-One:
-
 Many Bookings → One Vehicle
 
 One-to-One (Logical):
-
 Each booking connects one user and one vehicle
 
 🧩 ERD Submission
